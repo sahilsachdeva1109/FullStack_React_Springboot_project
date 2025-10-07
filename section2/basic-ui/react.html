@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Simple HTML using React</title>
+  </head>
+  <body>
+    <div id="root">
+      <!-- <div id="parent">
+        <div id="child1">
+          <h1 style="color: blue">Hi , I am Bob the Builder</h1>
+          <h2>I can fix it</h2>
+        </div>
+        <div id="child2">
+          <h1 style="color: orange">Hi, I am Dora The Explorer</h1>
+          <h2>let's go exploring</h2>
+        </div> -->
+      <!-- </div>  -->
+    </div>
+    <script src="./react-lib/react.development.js"></script>
+    <script src="./react-lib/react-dom.development.js"></script>
+    <script>
+      // 1st program to create a random number
+      //   const randomNumber = Math.floor(Math.random() * 100) + 1; // gives random no from 1 to 100
+
+      //   // creating new element to display the random number
+      //   const numberElement = React.createElement(
+      //     "h1",
+      //     null,
+      //     "Generated Number:" + randomNumber
+      //   );
+      //   const resultElement = React.createElement(
+      //     "h2",
+      //     { style: { color: "blue" } },
+      //     randomNumber % 2 == 0 ? "The number is even" : "The number is odd"
+      //   );
+
+      //   const root = ReactDOM.createRoot(document.getElementById("root"));
+      //   root.render([numberElement, resultElement]);
+
+      // Program to implement nested div in react
+
+      const nestedElement = React.createElement("div", { id: "parent" }, [
+        React.createElement("div", { id: "child1" }, [
+          React.createElement(
+            "h1",
+            { style: { color: "blue" } },
+            "Hi, I am Bob The builder."
+          ),
+          React.createElement("h2", {}, "I can Fix it."),
+        ]),
+        React.createElement("div", { id: "child2" }, [
+          React.createElement(
+            "h1",
+            { style: { color: "orange" } },
+            "Hi I am Dora the Explorer"
+          ),
+          React.createElement("h2", {}, "Let's go exploring.."),
+        ]),
+      ]);
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render([nestedElement]);
+    </script>
+  </body>
+</html>
