@@ -155,7 +155,7 @@ body {
 }
 
 .product-card:hover {
-  box-shadow: 0 4px 6px var(--hover-shadow-color);
+  box-shadow: 0 20px 50px var(--hover-shadow-color);
 }
 
 .product-card-image-container {
