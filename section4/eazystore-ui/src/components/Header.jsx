@@ -10,30 +10,30 @@ const Header = () => {
           <FontAwesomeIcon icon={faTags} className="fa-icon" />
           <span className="brand-title">Eaxy Stickers</span>
         </a>
-        <nav className="nav">
+        <nav className="easynav">
           <ul>
             <li>
-              <a href="/" className="nav-link">
+              <a href="/" className="navLink">
                 Home
               </a>
             </li>
             <li>
-              <a href="/about" className="nav-link">
+              <a href="/about" className="navLink">
                 About
               </a>
             </li>
             <li>
-              <a href="/contact" className="nav-link">
+              <a href="/contact" className="navLink">
                 Contact
               </a>
             </li>
             <li>
-              <a href="/login" className="nav-link">
+              <a href="/login" className="navLink">
                 Login
               </a>
             </li>
             <li>
-              <a href="/cart" className="nav-link">
+              <a href="/cart" className="navLink">
                 <FontAwesomeIcon icon={faShoppingBasket} />
                 Cart
               </a>
@@ -58,27 +58,27 @@ const Header = () => {
 //         <nav className="nav">
 //           <ul>
 //             <li>
-//               <a href="/" className="nav-link">
+//               <a href="/" className="navLink">
 //                 Home
 //               </a>
 //             </li>
 //             <li>
-//               <a href="/about" className="nav-link">
+//               <a href="/about" className="navLink">
 //                 About
 //               </a>
 //             </li>
 //             <li>
-//               <a href="/contact" className="nav-link">
+//               <a href="/contact" className="navLink">
 //                 Contact
 //               </a>
 //             </li>
 //             <li>
-//               <a href="/login" className="nav-link">
+//               <a href="/login" className="navLink">
 //                 Login
 //               </a>
 //             </li>
 //             <li>
-//               <a href="/cart" className="nav-link">
+//               <a href="/cart" className="navLink">
 //                 <FontAwesomeIcon icon={faShoppingBasket} />
 //                 Cart
 //               </a>
