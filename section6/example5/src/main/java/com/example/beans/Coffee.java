@@ -1,2 +1,5 @@
-package com.example.beans;public interface Coffee {
+package com.example.beans;
+
+public interface Coffee {
+    String makeCoffee();
 }

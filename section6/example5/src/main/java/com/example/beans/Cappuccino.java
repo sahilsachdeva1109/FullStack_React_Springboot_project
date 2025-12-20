@@ -1,9 +1,13 @@
 package com.example.beans;
 
-public class Espresso implements Coffee{
+
+import org.springframework.stereotype.Component;
+
+@Component("cappuccino")
+public class Cappuccino implements Coffee{
 
     @Override
     public String makeCoffee() {
-        return "Espresso Coffee";
+        return "Cappuccino Coffee";
     }
 }
