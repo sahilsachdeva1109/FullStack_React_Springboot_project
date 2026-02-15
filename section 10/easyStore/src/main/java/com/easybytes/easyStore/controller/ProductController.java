@@ -29,7 +29,8 @@ public class ProductController {
 //        this.productRepo = productRepo;
 //    }
     @GetMapping
-    public List<ProductDto> getProducts(){
+    public List<ProductDto> getProducts() throws InterruptedException {
+        // Thread.sleep(1000);
         List<ProductDto> productList = iProductService.getProducts();
         return productList;
     }

@@ -51,10 +51,9 @@ export default function Contact() {
       {/* Contact Form */}
       <Form
         method="POST"
-        ref={formRef}
+        ref={formRef} // useRef
         onSubmit={handleSubmit}
-        className="space-y-6 max-w-[768px] mx-auto"
-      >
+        className="space-y-6 max-w-[768px] mx-auto">
         {/* Name Field */}
         <div>
           <label htmlFor="name" className={labelStyle}>
@@ -120,8 +119,7 @@ export default function Contact() {
             className={textFieldStyle}
             required
             minLength={5}
-            maxLength={500}
-          ></textarea>
+            maxLength={500}></textarea>
         </div>
 
         {/* Submit Button */}
@@ -129,8 +127,7 @@ export default function Contact() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="px-6 py-2 text-white dark:text-black text-xl rounded-md transition duration-200 bg-primary dark:bg-light hover:bg-dark dark:hover:bg-lighter"
-          >
+            className="px-6 py-2 text-white dark:text-black text-xl rounded-md transition duration-200 bg-primary dark:bg-light hover:bg-dark dark:hover:bg-lighter">
             {isSubmitting ? "Submitting..." : "Submit"}
           </button>
         </div>
