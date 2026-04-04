@@ -33,9 +33,8 @@ public class ContactController {
     public ResponseEntity<String> saveContacts( @Valid @RequestBody ContactDto contactDto) {
         // Thread.sleep(1000);
        iContactService.saveContact(contactDto);
-
             return ResponseEntity.status(HttpStatus.CREATED).body(" Request Processed Successfully.") ;
-        }
     }
+}
 
 

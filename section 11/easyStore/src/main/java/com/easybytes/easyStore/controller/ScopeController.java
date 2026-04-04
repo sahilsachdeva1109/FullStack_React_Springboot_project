@@ -15,7 +15,6 @@ public class ScopeController {
     private final SessionScopeBean sessionScopeBean;
     private final ApplicationScopeBean applicationScopeBean;
 
-
     public ScopeController(RequestScopeBean requestScopeBean, SessionScopeBean sessionScopeBean, ApplicationScopeBean applicationScopeBean) {
         this.requestScopeBean = requestScopeBean;
         this.sessionScopeBean = sessionScopeBean;
@@ -43,4 +42,5 @@ public class ScopeController {
     public ResponseEntity<Integer> testScope(){
         return ResponseEntity.ok().body(applicationScopeBean.getVisitorCount());
     }
+
 }
