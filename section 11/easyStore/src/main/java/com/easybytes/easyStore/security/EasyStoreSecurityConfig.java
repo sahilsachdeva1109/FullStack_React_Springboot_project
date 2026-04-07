@@ -6,6 +6,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
@@ -36,6 +41,20 @@ public class EasyStoreSecurityConfig {
          requests.anyRequest().authenticated();
        }).formLogin(withDefaults()).httpBasic(withDefaults()).build();
     }
+
+    @Bean
+    public UserDetailsService userDetailsService(){
+        var user1 = User.builder().username("sahil").password(passwordEncoder().encode("$2a$12$b2gStAkzcZvfPZVVLeI/Rui0LqU96qxlKkRyF71BZLYnMSdly1Yfq")).roles("USER").build();
+        var user2 = User.builder().username("admin").password("$2a$12$8pn4L4FY31FbvcbAJXiw..tljdAqOacgqaa4UVHPxCsudMNn3FmsO").roles("USER","ADMIN").build();
+
+        return new InMemoryUserDetailsManager(user1,user2);
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder(){
+        return new BCryptPasswordEncoder();
+    }
+
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
